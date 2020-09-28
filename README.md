@@ -7,11 +7,17 @@ If you want to contribute to DITFBot, make sure to base your branch off of our d
 
 ```
 1) Create your own branch from development brach
-    1.1) Name should be equal to Feature Request name
-    
+    1.1) Name should be equal to Feature Request OR Bug fix name
+    1.2) One developer per Feature Request / Bug Fix.
 2) Push changes to newly created branch
 3) Create merge request to development branch and request code-review for merge request.
 ```
+
+#### Code review guidelines
+* Code review goes through owner of repo.
+* Comment only problematic parts of code.
+* Include links if needed to documentation and/or external sources to guide person into proper code conventions/style.
+* Merge requests only if tests complete (automatic CI/CD)
 
 ### Dependencies
 
@@ -35,6 +41,11 @@ This project requires Java 15+. (`openjdk`, `adoptopenjdk`)
 
 Dependencies are defined in `build.gradle` file and should be automatically downloaded when building project.
 
+### Maintainers
+
+* Norberts Kakste [norbert-k](https://github.com/norbert-k)
+* Jānis Bērziņš
+
 ### Related projects & documentation:
 
 * JDA:
@@ -50,6 +61,7 @@ Dependencies are defined in `build.gradle` file and should be automatically down
 ### Roadmap
 
 - [x] Read config.properties file for discord bot specific information
+- [ ] Automatic CI/CD (Continuous integration & continuous delivery)
 - [ ] CLI Interface with JCommander
 - [ ] Message handling architecture
 - [ ] Generate an invitation link from CLI & print it out on Bot startup
