@@ -102,9 +102,14 @@ Enter repository URL: `https://github.com/norbert-k/DITFBot.git` and click Clone
 - [ ] Ping <-> Pong message handler
 - [ ] System information (!debuginfo) message handler (GC, CPU usage etc...)
 - [ ] Extra message handler (custom messages, further review required!)
-- [ ] Database access (read configuration from config.properties)
+- [ ] RTU Oauth registration support (link accounts from Private messages)
+- [ ] RTU Calendar support (upcoming lectures for defined groups)
+- [ ] Database access (read configuration from `config.properties`)
 - [ ] Database migrations with flyway
 - [ ] Log every message to database
+- [ ] Audio support with `LavaPlayer`
+- [ ] Spotify / Youtube integration.
+- [ ] Google docs integration for recorded lecture videos/audio (TODO requirements)
 - [ ] Simple VueJS based message viewer
 
 ### Feature list
@@ -112,10 +117,10 @@ Enter repository URL: `https://github.com/norbert-k/DITFBot.git` and click Clone
 #### CLI / Startup:
 - [ ] Read config.properties config file for API keys & DB settings
 - [ ] Interactive CLI with tab completion and --help support
-- [ ] Pre startup health-checks
+- [ ] Pre-startup health-checks
 
 #### Integrations
-- [ ] RTU Sudent Calendar (`.ics`) support
+- [ ] RTU Student Calendar (`.ics`) sync support
 - [ ] Register users with RTU OAuth
 - [ ] Message logging 
 
