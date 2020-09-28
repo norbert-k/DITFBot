@@ -23,6 +23,7 @@ public class DITFBot {
     public static DITFBotConfig config;
 
     public static void main(String[] args) {
+
         System.out.println(logo);
         // Read BOT Configuration from config.properties (resources folder)
         try {
