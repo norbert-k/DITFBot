@@ -1,11 +1,15 @@
 package io.github.ditfbot;
 
+import discordbot.DITFDiscordBot;
 import io.github.ditfbot.config.DITFBotConfig;
 
+import javax.security.auth.login.LoginException;
 import java.io.IOException;
 
 public class DITFBot {
     public static final String logo;
+
+    public static DITFDiscordBot discordBot;
 
     static {
         logo = "  _____ _____ _______ ______ ____        _   \n" +
@@ -27,6 +31,13 @@ public class DITFBot {
             config.printConfig();
         } catch (IOException ioException) {
             ioException.printStackTrace();
+            System.exit(1);
+        }
+
+        try {
+            discordBot = new DITFDiscordBot(config);
+        } catch (LoginException e) {
+            e.printStackTrace();
             System.exit(1);
         }
 
