@@ -47,6 +47,21 @@ Dependencies are defined in `build.gradle` file and should be automatically down
     * Github: https://github.com/cbeust/jcommander
     * Documentation: https://jcommander.org
 
+### Roadmap
+
+- [ ] Read config.properties file for discord bot specific information
+- [ ] CLI Interface with JCommander
+- [ ] Message handling architecture
+- [ ] Generate an invitation link from CLI & print it out on Bot startup
+- [ ] List all joined guilds on startup and while running
+- [ ] Log every message with logger
+- [ ] Ping <-> Pong message handler
+- [ ] System information (!debuginfo) message handler (GC, CPU usage etc...)
+- [ ] Extra message handler (custom messages, further review required!)
+- [ ] Database access (read configuration from config.properties)
+- [ ] Database migrations with flyway
+- [ ] Log every message to database
+- [ ] Simple VueJS based message viewer
 
 ### Feature list
 
