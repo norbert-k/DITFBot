@@ -66,12 +66,12 @@ Dependencies are defined in `build.gradle` file and should be automatically down
 ### Feature list
 
 #### CLI / Startup:
-- [ ] Read .yaml config file for API keys & DB settings
+- [ ] Read config.properties config file for API keys & DB settings
 - [ ] Interactive CLI with tab completion and --help support
 - [ ] Pre startup health-checks
 
 #### Integrations
-- [ ] Calendar support
+- [ ] RTU Sudent Calendar (`.ics`) support
 - [ ] Register users with RTU OAuth
 - [ ] Message logging 
 
