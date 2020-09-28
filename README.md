@@ -49,7 +49,7 @@ Dependencies are defined in `build.gradle` file and should be automatically down
 
 ### Roadmap
 
-- [ ] Read config.properties file for discord bot specific information
+- [x] Read config.properties file for discord bot specific information
 - [ ] CLI Interface with JCommander
 - [ ] Message handling architecture
 - [ ] Generate an invitation link from CLI & print it out on Bot startup
