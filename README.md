@@ -42,6 +42,37 @@ This project requires Java 15+. (`openjdk`, `adoptopenjdk`)
 
 Dependencies are defined in `build.gradle` file and should be automatically downloaded when building project.
 
+#### Setting up development environment
+
+1) Download `openjdk`/`adoptopenjdk`
+Guide: https://adoptopenjdk.net/installation.html?variant=openjdk15&jvmVariant=openj9#x64_linux-jdk
+
+2) Dowload Jetbrains Intelij IDEA
+* Use student discount here: https://www.jetbrains.com/community/education/ (with RTU .edu email)
+
+3) Register github.com account
+
+4) Download & set-up git with e-mail you used for github.com account:
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+Set-up email & name for git (use name & email from your github.com account):
+```bash
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
+5) Import DITFBot project in Intelij IDEA
+
+
+Open Intelij IDEA
+![First step](setupguide/1.png)
+
+Click on `Get from Version control`
+![Second step](setupguide/2.png)
+
+Enter repository URL: `https://github.com/norbert-k/DITFBot.git` and click Clone
+![Third step](setupguide/3.png)
+
+**Done!**
+
 ### Maintainers
 
 * Norberts Kakste [norbert-k](https://github.com/norbert-k)
