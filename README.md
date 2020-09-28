@@ -1,5 +1,5 @@
-# DITFBot
-RTU DITF Discord Bot
+# _**DITFBot**_
+_**RTU DITF Discord Bot**_
 
 ### Contributing
 
@@ -8,7 +8,6 @@ If you want to contribute to DITFBot, make sure to base your branch off of our d
 ```
 1) Create your own branch from development brach
     1.1) Name should be equal to Feature Request OR Bug fix name
-    1.2) One developer per Feature Request / Bug Fix.
 2) Push changes to newly created branch
 3) Create merge request to development branch and request code-review for merge request.
 ```
