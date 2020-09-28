@@ -5,9 +5,21 @@ import io.github.ditfbot.config.DITFBotConfig;
 import java.io.IOException;
 
 public class DITFBot {
+    public static final String logo;
+
+    static {
+        logo = "  _____ _____ _______ ______ ____        _   \n" +
+                " |  __ \\_   _|__   __|  ____|  _ \\      | |  \n" +
+                " | |  | || |    | |  | |__  | |_) | ___ | |_ \n" +
+                " | |  | || |    | |  |  __| |  _ < / _ \\| __|\n" +
+                " | |__| || |_   | |  | |    | |_) | (_) | |_ \n" +
+                " |_____/_____|  |_|  |_|    |____/ \\___/ \\__|\n";
+    }
+
     public static DITFBotConfig config;
 
     public static void main(String[] args) {
+        System.out.println(logo);
         // Read BOT Configuration from config.properties (resources folder)
         try {
             // Set config and fail in-case file is corrupted / doesn't exist

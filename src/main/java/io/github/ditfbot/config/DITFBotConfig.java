@@ -12,7 +12,9 @@ public class DITFBotConfig {
     }
 
     public void printConfig() {
+        System.out.println("---DITFBot configuration start ---");
         System.out.println("Token: " + this.discordToken);
+        System.out.println("---DITFBot configuration end ---");
     }
 
     public static DITFBotConfig getConfig() throws IOException {
