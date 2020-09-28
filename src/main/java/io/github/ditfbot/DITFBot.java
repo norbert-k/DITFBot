@@ -1,6 +1,6 @@
 package io.github.ditfbot;
 
-import discordbot.DITFDiscordBot;
+import io.github.ditfbot.discordbot.DITFDiscordBot;
 import io.github.ditfbot.config.DITFBotConfig;
 
 import javax.security.auth.login.LoginException;

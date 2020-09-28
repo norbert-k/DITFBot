@@ -1,4 +1,4 @@
-package discordbot;
+package io.github.ditfbot.discordbot;
 
 import io.github.ditfbot.config.DITFBotConfig;
 import io.github.ditfbot.eventlisteners.StartupEventListener;
