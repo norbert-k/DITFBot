@@ -13,6 +13,8 @@ If you want to contribute to DITFBot, make sure to base your branch off of our d
 3) Create merge request to development branch and request code-review for merge request.
 ```
 
+**DO NOT COMMIT PRIVATE KEY / SECRETS (for eg config.properties file with your personal keys)!!!**
+
 #### Code review guidelines
 * Code review goes through owner of repo.
 * Comment only problematic parts of code.
