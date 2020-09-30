@@ -6,9 +6,11 @@ import java.util.Properties;
 
 public class DITFBotConfig {
     public final String discordToken;
+    public final String commandPrefix;
 
-    public DITFBotConfig(String discordToken) {
+    public DITFBotConfig(String discordToken, String commandPrefix) {
         this.discordToken = discordToken;
+        this.commandPrefix = commandPrefix;
     }
 
     public void printConfig() {
@@ -30,6 +32,6 @@ public class DITFBotConfig {
         //load a properties file from class path, inside static method
         prop.load(input);
 
-        return new DITFBotConfig(prop.getProperty("DiscordToken"));
+        return new DITFBotConfig(prop.getProperty("DiscordToken"), prop.getProperty("CommandPrefix"));
     }
 }

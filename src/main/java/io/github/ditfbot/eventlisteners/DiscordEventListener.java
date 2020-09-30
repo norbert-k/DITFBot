@@ -1,24 +1,29 @@
 package io.github.ditfbot.eventlisteners;
 
+import io.github.ditfbot.config.DITFBotConfig;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.events.GenericEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.ParameterizedType;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Future;
 
 /**
  * Handles incoming Discord events that are specified by T type (T extends GenericEvent), and
  * additional typeFilter method to fine tune incoming events.
  */
 public abstract class DiscordEventListener<T extends GenericEvent> extends ListenerAdapter {
+    final public DITFBotConfig config;
+
     // Save T type to bypass JVM type erasure
     private Class<T> clazz;
 
+    protected DiscordEventListener(DITFBotConfig config) {
+        this.config = config;
+    }
+
     // Get Parameterized (initialized non-null) Class<T>
-    public Class<T> getParameterizedClass() {
+    final public Class<T> getParameterizedClass() {
         if (clazz == null) {
             ParameterizedType pt = (ParameterizedType) this.getClass().getGenericSuperclass();
             clazz = (Class<T>) pt.getActualTypeArguments()[0];
@@ -61,7 +66,7 @@ public abstract class DiscordEventListener<T extends GenericEvent> extends Liste
     }
 
     // Event handler
-    Future<Void> discordEventHandler(T event, JDA jda) {
-        return new CompletableFuture<>();
+    void discordEventHandler(T event, JDA jda) {
+        return;
     }
 }
