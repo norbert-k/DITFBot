@@ -5,6 +5,7 @@ import io.github.ditfbot.eventlisteners.GuildMessageListener;
 import io.github.ditfbot.eventlisteners.MessageReceivedObserver;
 import io.github.ditfbot.eventlisteners.StartupEventListener;
 import io.github.ditfbot.messagelistener.CurrentTimeMessageListener;
+import io.github.ditfbot.messagelistener.JsMessageListener;
 import io.github.ditfbot.messagelistener.PingPongMessageListener;
 import io.github.ditfbot.messagelistener.stirons.StironsMessageListener;
 import net.dv8tion.jda.api.JDA;
@@ -23,6 +24,7 @@ public class DITFDiscordBot {
         messageReceivedObserver.addMessageListener(new PingPongMessageListener(ditfBotConfig));
         messageReceivedObserver.addMessageListener(new CurrentTimeMessageListener(ditfBotConfig));
         messageReceivedObserver.addMessageListener(new StironsMessageListener(ditfBotConfig));
+        messageReceivedObserver.addMessageListener(new JsMessageListener(ditfBotConfig));
 
         jda = JDABuilder.createDefault(ditfBotConfig.discordToken)
                 .addEventListeners(new StartupEventListener())

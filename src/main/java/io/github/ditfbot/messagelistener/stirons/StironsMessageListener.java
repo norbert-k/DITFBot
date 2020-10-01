@@ -11,10 +11,12 @@ public class StironsMessageListener extends MessageListener {
         super(botConfig);
 
         this.messageListenerConfig = new MessageListenerConfig.MessageListenerConfigBuilder()
-                .commandName("")
+                .commandName("stirons")
                 .botConfig(botConfig)
                 .build();
     }
+
+
 
     @Override
     public void handleMessage(DiscordCommand command, MessageReceivedEvent event) {

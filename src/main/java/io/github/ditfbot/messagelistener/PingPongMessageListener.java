@@ -16,21 +16,21 @@ public class PingPongMessageListener extends MessageListener {
                 .build();
     }
 
-    private void sendNormalPong(long time, MessageChannel channel) {
-        channel.sendMessage("pong!")
-                // Queue back message to discord (JDA library handles rate-limiting for us)
-                .queue(response -> {
-                    // When successful edit message to include response time
-                    response.editMessageFormat("pong!: %d ms", System.currentTimeMillis() - time).queue();
-                });
-    }
+    private void sendNormalPong(long time, DiscordCommand command, Message msg, MessageChannel channel) {
+        String message = "pong!";
 
-    private void sendArgumentPong(long time, MessageChannel channel, String argument) {
-        channel.sendMessage("pong! " + argument)
+        if (command.hasArguments) {
+            message += " " + command.arguments[0];
+        }
+
+        String finalMessage = message;
+        channel.sendMessage(message)
                 // Queue back message to discord (JDA library handles rate-limiting for us)
                 .queue(response -> {
                     // When successful edit message to include response time
-                    response.editMessageFormat("pong!: %d ms", System.currentTimeMillis() - time).queue();
+                    response.editMessageFormat(finalMessage + ": %d ms, requester: [%s]",
+                            System.currentTimeMillis() - time,
+                            msg.getAuthor().getName()).queue();
                 });
     }
 
@@ -44,10 +44,6 @@ public class PingPongMessageListener extends MessageListener {
         // Get current UNIX Epoch time in milliseconds
         long time = System.currentTimeMillis();
 
-        if (command.hasArguments) {
-            sendArgumentPong(time, channel, command.arguments[0]);
-        } else {
-            sendNormalPong(time, channel);
-        }
+        sendNormalPong(time, command, msg, channel);
     }
 }

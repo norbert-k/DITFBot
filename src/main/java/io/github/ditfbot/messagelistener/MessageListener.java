@@ -27,5 +27,6 @@ public abstract class MessageListener {
     }
 
     public void handleMessage(DiscordCommand command, MessageReceivedEvent event) {
+        
     }
 }

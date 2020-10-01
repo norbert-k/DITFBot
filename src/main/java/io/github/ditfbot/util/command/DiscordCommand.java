@@ -48,7 +48,9 @@ public class DiscordCommand {
 
     public static boolean checkCommand(String commandPrefix, String commandName, String message) {
         if (message.startsWith(commandPrefix)) {
-            return removePrefix(message, commandPrefix).equals(commandName);
+            String removedPrefix = removePrefix(message, commandPrefix);
+            String command = removedPrefix.split(" ")[0];
+            return command.equals(commandName);
         } else {
             return false;
         }
